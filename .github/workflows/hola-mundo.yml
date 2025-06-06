@@ -1,21 +1,13 @@
-name: Python application
-
-on:
-  push:
-    branches: [ "aprendiendo-github-actions" ]
-  pull_request:
-    branches: [ "aprendiendo-github-actions" ]
+name: Aprendiendo GitHub Actions
+run-name: ¡Estoy aprendiendo GitHub Actions!
+on: [push]
 jobs:
-  build:
-
+  hola-mundo:
     runs-on: ubuntu-latest
-
     steps:
-    - uses: actions/checkout@v3
-    - name: Set up Python 3.11
-      uses: actions/setup-python@v4
-      with:
-        python-version: "3.11"
-
-    - name: script-runing
-      run: python main.py
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Definir variable
+        run: echo "USERNAME=${{ github.actor }}" >> $GITHUB_ENV
+      - name: Correr script
+        run: python hola_mundo.py
