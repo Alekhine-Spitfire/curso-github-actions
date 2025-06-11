@@ -1,13 +1,13 @@
 name: Saludo usando variables
 run-name: ¡Estoy aprendiendo a usar Variables!
-on: [push, pull_request]
+on: workflow_dispatch
 env:
-  fruta1: Manzana
-  fruta2: Pera
-  fruta3: Frutilla
+  DIA_DE_SEMANA: Lunes
 jobs:
-  Variables:
+  saludo-variables:
     runs-on: ubuntu-latest
+    env:
+      SALUDO: Hola
     steps:
-      - name: echo frutas
-        run: echo "La $fruta1 es roja, la $fruta2 es verde, la $fruta3 es roja y el ${{ vars.NOMBRE }} es amarillo"
+      - name: Saludar
+        run: echo "$SALUDO, $ {{vars.NOMBRE }}. Hoy es $DIA_DE_SEMANA!"
