@@ -1,4 +1,4 @@
-name: Saludo usando variables
+name: Paso 6, Aprende a usar Variables Globales
 run-name: ¡Estoy aprendiendo a usar Variables!
 on:
   workflow_dispatch: {}
