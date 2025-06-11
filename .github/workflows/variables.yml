@@ -1,4 +1,5 @@
-name: Paso 6, Aprende a usar Variables de Entorno
+name: Saludo usando variables
+run-name: ¡Estoy aprendiendo a usar Variables!
 
 on:
   workflow_dispatch:
