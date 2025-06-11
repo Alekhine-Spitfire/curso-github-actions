@@ -12,8 +12,8 @@ jobs:
           echo "Rama: ${{ github.ref_name }}"
           echo "Evento: ${{ github.event_name }}"
           echo "Actor: ${{ github.actor }}"
-  check-main:
-    if: ${{ github.ref == 'refs/heads/main' }}
+  not-main:
+    if: ${{ github.ref != 'refs/heads/main' }}
     runs-on: ubuntu-latest
     steps:
-      - run: echo "Desplegando en la rama $GITHUB_REF"
+      - run: echo "Esta no es la rama main, es ${{ github.ref_name }}"
