@@ -2,6 +2,11 @@ name: Paso 6, Aprende a usar Variables de Entorno
 
 on:
   workflow_dispatch:
+    inputs:
+      dummy:
+        description: "Este input es solo para que el workflow aparezca en la UI"
+        required: false
+        default: "ok"
 
 env:
   DIA_DE_SEMANA: Lunes
