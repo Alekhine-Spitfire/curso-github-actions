@@ -1,4 +1,5 @@
-name: Reto 5 - Aprende a usar las Variables de Entorno
+name: Saludo usando variables
+run-name: ¡Estoy aprendiendo a usar Variables!
 on: [push, pull_request]
 env:
   fruta1: Manzana
